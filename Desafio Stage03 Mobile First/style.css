@@ -1,0 +1,152 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  font-size: 62.5%;
+
+  --hue: 232;
+  --cl-nameheader: hsl(0, 0%, 100%);
+  --cl-namecard: hsl(232, 17%, 35%, 1);
+  --cl-backlogo: hsl(218, 17%, 62%);
+  --cl-backnamelogo: hsl(275, 18%, 79%);
+  --cl-backnamecard: hsl(312, 91%, 96%);
+  --cl-backmain: hsl(233, 100%, 97%);
+  --cl-textmain: hsl(274, 84%, 12%);
+
+  --ft-h: 'Staatliches', cursive;
+  --ft-text: 'Palanquin', sans-serif; 
+}
+
+.conteiner{
+  background-color: var(--cl-backmain);
+  max-width: 38.4rem;
+  margin: 0 auto;
+}
+
+header{
+  height: 27.9rem;
+  background-color: var(--cl-backlogo);
+  max-width: 38.4rem;
+  padding: 3.2rem 0 2.9rem;
+  position:relative;
+}
+
+header h1{
+  height: 4.9rem;
+  width: 100%;
+  font-family: var(--ft-h);
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--cl-nameheader);
+  background-color: var(--cl-backnamelogo);
+  position: absolute;
+  bottom: 2.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo img{
+display: flex;
+flex-direction: column;
+margin: 0 auto;
+}
+
+main{
+  padding: 1.4rem 3.2rem 6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+main p{
+  font-family: var(--ft-text);
+  font-size: 2rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 6.3rem;
+  color: var(--cl-textmain);
+}
+
+.cards{
+  position: relative;
+}
+
+.cards h2{
+  font-family: var(--ft-h);
+  font-size: 2rem;
+  line-height: 3.4rem;
+  letter-spacing: 2px;
+  color: var(--cl-namecard);
+  width: 11.2rem;
+  height: 3.5rem;
+  background-color: var(--cl-backnamecard);
+  border-radius: 2rem;
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  text-align: center;
+  animation-name: toptobottom;
+  animation-duration: 800ms;
+  animation-delay:500ms;
+  animation-fill-mode: backwards;
+}
+
+@keyframes toptobottom{
+  0%{
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+  
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main img{
+  width: 100%;
+  border-radius: 2rem;
+  animation-name: upwards;
+  animation-duration: 800ms;
+}
+
+main div + div{
+  margin-top: 36px;
+}
+
+@keyframes upwards{
+0%{
+  opacity: 0;
+  transform: translateY(2rem);
+}
+
+100%{
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+
+#img1{
+  max-height: 25rem;
+  object-fit: cover;
+}
+#img2{
+  max-height: 45rem;
+  object-fit: cover;
+}
+#img3{
+  height: 25rem;
+  object-fit: cover;
+}
+#img4{
+  height: 45rem;
+  object-fit: cover;
+}
+
